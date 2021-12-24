@@ -23,9 +23,11 @@ body {
 nav {
   display: flex;
   align-items: center;
-  list-style: none;
-  padding-left: 0px;
   grid-area: nav;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 .nav-links li {
   display: inline-block;
@@ -108,5 +110,5 @@ button {
   border-color: #1eb3ec;
   background: white;
   font-weight: bold;
-  margin-top:30px
+  margin-top: 30px;
 }
