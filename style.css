@@ -5,6 +5,7 @@ body {
   font-family: -webkit-pictograph;
 }
 .container {
+  padding: 30px;
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -19,7 +20,7 @@ body {
 }
 /* start style header */
 
-.nav {
+nav {
   display: flex;
   align-items: center;
   list-style: none;
@@ -45,7 +46,6 @@ body {
 /* end style header */
 /* start style order number */
 #orderNumber {
-  padding-left: 35px;
   grid-area: orderNumber;
   font-weight: bolder;
   font-size: 30px;
@@ -53,7 +53,6 @@ body {
 /* end style order number */
 /* start style order placed */
 #orderPlaced {
-  padding-left: 35px;
   grid-area: orderPlaced;
 }
 #orderPlaced p {
@@ -65,9 +64,13 @@ body {
 #orderPlaced p .pending {
   color: orange;
 }
+/* start style content */
 #content {
-  padding-left: 35px;
   grid-area: content;
+}
+.content {
+  border-radius: 10px;
+  border: 3px solid #eeeeee;
 }
 /* start style sidebar */
 #sideBar {
@@ -75,14 +78,12 @@ body {
   background-color: #eeeeee;
   padding: 15px;
   border-radius: 10px;
-  margin-right: 40px;
 }
 
 #sideBar .p-bold {
   font-weight: bold;
 }
 footer {
-  padding-left: 35px;
   grid-area: footer;
 }
 @media only screen and (max-width: 550px) {
@@ -107,7 +108,5 @@ button {
   border-color: #1eb3ec;
   background: white;
   font-weight: bold;
-}
-button .print{
-  margin-left: 50px;
+  margin-top:30px
 }
