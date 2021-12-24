@@ -74,6 +74,12 @@ nav ul {
   border-radius: 10px;
   border: 3px solid #eeeeee;
 }
+.content table {
+  width: 100%;
+}
+td {
+  text-align: center;
+}
 /* start style sidebar */
 #sideBar {
   grid-area: sideBar;
