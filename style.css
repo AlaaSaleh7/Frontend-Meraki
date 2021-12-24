@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: -webkit-pictograph;
+}
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 0.2fr 1.5fr 0.5fr;
+  grid-template-areas:
+    "nav nav nav nav nav"
+    "orderNumber orderNumber orderNumber orderNumber orderNumber"
+    "orderPlaced orderPlaced orderPlaced orderPlaced orderPlaced"
+    "content content content sideBar sideBar"
+    "footer footer footer sideBar sideBar";
+  grid-gap: 0.7rem;
+}
+/* start style header */
+
+.nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0px;
+  grid-area: nav;
+}
+.nav-links li {
+  display: inline-block;
+  padding: 0px 2px;
+  font-weight: bold;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #1eb3ec;
+}
+.nav-links li span {
+  color: black;
+  padding-left: 10px;
+}
+.nav-links li .active {
+  color: black;
+}
+/* end style header */
+/* start style order number */
+#orderNumber {
+  padding-left: 35px;
+  grid-area: orderNumber;
+  font-weight: bolder;
+  font-size: 30px;
+}
+/* end style order number */
+/* start style order placed */
+#orderPlaced {
+  padding-left: 35px;
+  grid-area: orderPlaced;
+}
+#orderPlaced p {
+  font-weight: bolder;
+}
+#orderPlaced p span {
+  padding-left: 9px;
+}
+#orderPlaced p .pending {
+  color: orange;
+}
+#content {
+  padding-left: 35px;
+  grid-area: content;
+}
+/* start style sidebar */
+#sideBar {
+  grid-area: sideBar;
+  background-color: #eeeeee;
+  padding: 15px;
+  border-radius: 10px;
+  margin-right: 40px;
+}
+
+#sideBar .p-bold {
+  font-weight: bold;
+}
+footer {
+  padding-left: 35px;
+  grid-area: footer;
+}
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 0.4fr 2fr 1.5fr 0.4fr;
+    grid-template-areas:
+      "nav"
+      "orderNumber"
+      "orderPlaced"
+      "content"
+      "sideBar"
+      "footer";
+  }
+}
+/* start style button */
+button {
+  color: #1eb3ec;
+  border-radius: 30px;
+  width: 125px;
+  height: 35px;
+  border-color: #1eb3ec;
+  background: white;
+  font-weight: bold;
+}
+button .print{
+  margin-left: 50px;
+}
